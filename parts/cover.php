@@ -1,0 +1,5 @@
+<?php namespace Webzine\Material3; ?>
+<section class="wz-cover <?php echo esc_attr( $args['class'] ?? '' ); ?>">
+ <?php if ( has_post_thumbnail() || get_header_image() ) : ?><a class="wz-cover-image" href="<?php the_permalink(); ?>" tabindex="-1" aria-hidden="true"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'wz-cover', array( 'alt' => '', 'loading' => 'eager', 'fetchpriority' => 'high' ) ); } else { ?><img src="<?php echo esc_url( get_header_image() ); ?>" alt="" loading="eager" fetchpriority="high"><?php } ?></a><?php endif; ?>
+ <div class="wz-cover-copy"><span class="wz-eyebrow"><?php esc_html_e( '本期精选 / EDITOR’S NOTE', 'webzine-material3' ); ?></span><h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2><p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 58 ) ); ?></p><div class="wz-cover-actions"><a class="wz-button" href="<?php the_permalink(); ?>"><?php esc_html_e( '开始阅读', 'webzine-material3' ); ?> <?php echo icon( 'arrow' ); ?></a><?php save_button(); ?></div></div>
+</section>

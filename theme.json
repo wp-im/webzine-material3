@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "settings": {
+    "layout": {
+      "contentSize": "700px",
+      "wideSize": "1000px"
+    },
+    "color": {
+      "defaultPalette": true
+    },
+    "typography": {
+      "fluid": true
+    }
+  }
+}
